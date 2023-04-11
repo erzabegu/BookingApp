@@ -13,8 +13,8 @@ const OnBoardTemplate = () => {
             <Text style={styles.planTrip}>Plan your trip now!</Text>
             <Carousel/>
             <View style={styles.buttonsWrapper}>
-                <Button text={'Create account'} type={"filled"} style={{marginHorizontal: 20}}/>
-                <Button type={"outlined"} text={'Sign In'} style={{marginHorizontal: 20}}/>
+                <Button text={'Create account'} type={"filled"}/>
+                <Button type={"outlined"} text={'Sign In'}/>
             </View>
         </SafeAreaView>
     </View>
@@ -55,5 +55,6 @@ const styles = StyleSheet.create({
     buttonsWrapper: {
         marginTop: 50,
         gap: 10,
+        marginHorizontal: 20
     }
 });
