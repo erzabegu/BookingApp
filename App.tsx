@@ -16,6 +16,7 @@ import {
     Roboto_900Black_Italic,
 } from '@expo-google-fonts/roboto';
 
+
 export default function App() {
     const [fontsLoaded] = useFonts({
         Roboto_100Thin,

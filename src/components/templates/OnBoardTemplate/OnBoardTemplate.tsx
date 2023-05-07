@@ -2,8 +2,13 @@ import {View, StyleSheet, Text, SafeAreaView} from "react-native";
 import {Button} from "../../atoms";
 
 import Carousel from "../../organisms/Carousel/Carousel";
+import {ParamListBase, useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+
 
 const OnBoardTemplate = () => {
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
     return <View style={styles.container}>
         <SafeAreaView>
             <View style={styles.titleWrapper}>
@@ -14,7 +19,7 @@ const OnBoardTemplate = () => {
             <Carousel/>
             <View style={styles.buttonsWrapper}>
                 <Button text={'Create account'} type={"filled"}/>
-                <Button type={"outlined"} text={'Sign In'}/>
+                <Button type={"outlined"} text={'Sign In'} onPress={() => navigation.navigate("login")}/>
             </View>
         </SafeAreaView>
     </View>
